@@ -161,7 +161,7 @@ const Minter = () => {
       },
     };
     const res = await axios.get(
-      `https://wl2.kodinghandle.com/get-proof-2/${account}`,
+      `https://presale2.kodinghandle.com/get-proof-2/${account}`,
       config
     );
     return res;
@@ -176,7 +176,7 @@ const Minter = () => {
     };
     // const res = "https://www.google.com";
     const res = await axios.get(
-      `https://wl3.kodinghandle.com/get-proof-3/${account}`,
+      `https://presale3.kodinghandle.com/get-proof-3/${account}`,
       config
     );
     // const res = await axios.get(`http://localhost:8000/get-proof-3/${account}`);
