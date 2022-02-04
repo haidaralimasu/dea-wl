@@ -7,7 +7,7 @@ import banner from "../banner.png";
 import { notifyMintSuccess, notifyError, notifyNetwork } from "../toast";
 import {
   useTotalSupply,
-  useMaxSupply,
+  // useMaxSupply,
   useCost,
   useWeiCost,
   useBalanceOf,
@@ -18,7 +18,7 @@ const Minter = () => {
   const { account, activateBrowserWallet } = useEthers();
   const [minting, setMinting] = useState(false);
   const totalSupply = useTotalSupply();
-  const maxSupply = useMaxSupply();
+  // const maxSupply = useMaxSupply();
   const cost = useCost();
   const weiCost = useWeiCost();
   const balance = useBalanceOf(account);
@@ -148,11 +148,11 @@ const Minter = () => {
                 </h2>
               </div>
             ) : null}
-            <div className="vl"></div>
-            <div className="minter-status-card">
+            {/* <div className="vl"></div> */}
+            {/* <div className="minter-status-card">
               <h6>To Be Minted</h6>
               <h2>{maxSupply - totalSupply}</h2>
-            </div>
+            </div> */}
           </div>
         ) : (
           <div className="minter-status">
@@ -166,11 +166,11 @@ const Minter = () => {
               <h2>0.15 ETH</h2>
             </div>
 
-            <div className="vl"></div>
-            <div className="minter-status-card">
+            {/* <div className="vl"></div> */}
+            {/* <div className="minter-status-card">
               <h6>To Be Minted</h6>
               <h2>0/3000</h2>
-            </div>
+            </div> */}
           </div>
         )}
       </div>
