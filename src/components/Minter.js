@@ -72,7 +72,7 @@ const Minter = () => {
         <img src={banner} className="banner" alt="banner" />
         <h1 className="minter-h1">Mint Your Dominant Eagle</h1>
         <div style={{ marginTop: 30, padding: 10 }}>
-          <h3 className="minter-h1">Public Sale On 9 FEB 5 PM UTC</h3>
+          <h3 className="minter-h1">Public Sale On 19 FEB 5 PM UTC</h3>
         </div>
 
         {totalSupply < 3000 ? (
