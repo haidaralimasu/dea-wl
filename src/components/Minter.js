@@ -71,48 +71,18 @@ const Minter = () => {
       <div className="minter-main">
         <img src={banner} className="banner" alt="banner" />
         <h1 className="minter-h1">Mint Your Dominant Eagle</h1>
+        <div style={{ marginTop: 30, padding: 10 }}>
+          <h3 className="minter-h1">Public Sale On 9 FEB 5 PM UTC</h3>
+        </div>
+
         {totalSupply < 3000 ? (
           <div className="minting-section">
-            {account ? (
-              <div className="minting-section">
-                <button className="connect btn btn-gradient-blue">{`${account.slice(
-                  0,
-                  6
-                )}...${account.slice(-6)}`}</button>
-
-                <div>
-                  <>
-                    <button
-                      className="btn btn-round amount  btn-gradient-blue"
-                      onClick={() => decrease()}
-                    >
-                      -
-                    </button>
-                    <button
-                      onClick={() => handleMint()}
-                      className="btn mint  btn-gradient-blue"
-                    >
-                      {minting ? "Please Wait" : `Mint ${amount}`}
-                    </button>
-                    <button
-                      className="btn btn-round amount  btn-gradient-blue"
-                      onClick={() => increase()}
-                    >
-                      +
-                    </button>
-                  </>
-                </div>
-              </div>
-            ) : (
-              <div>
-                <button
-                  onClick={() => activateBrowserWallet(onError)}
-                  className="connect btn btn-gradient-blue"
-                >
-                  Connect Metamask
-                </button>
-              </div>
-            )}
+            <button
+              onClick={() => activateBrowserWallet(onError)}
+              className="connect btn btn-gradient-blue"
+            >
+              Public Sale Soon
+            </button>
           </div>
         ) : (
           <div className="minting-section">
@@ -126,12 +96,12 @@ const Minter = () => {
           <div className="minter-status">
             <div className="minter-status-card">
               <h6>Status</h6>
-              <h2>Live</h2>
+              <h2>Soon</h2>
             </div>
             <div className="vl"></div>
             <div className="minter-status-card">
               <h6>Price</h6>
-              <h2>{cost} ETH</h2>
+              <h2>0.15 ETH</h2>
             </div>
             <div className="vl"></div>
             {account ? (
