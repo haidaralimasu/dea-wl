@@ -81,32 +81,26 @@ const Minter = () => {
                 )}...${account.slice(-6)}`}</button>
 
                 <div>
-                  {balance < limit ? (
-                    <>
-                      <button
-                        className="btn btn-round amount  btn-gradient-blue"
-                        onClick={() => decrease()}
-                      >
-                        -
-                      </button>
-                      <button
-                        onClick={() => handleMint()}
-                        className="btn mint  btn-gradient-blue"
-                      >
-                        {minting ? "Please Wait" : `Mint ${amount}`}
-                      </button>
-                      <button
-                        className="btn btn-round amount  btn-gradient-blue"
-                        onClick={() => increase()}
-                      >
-                        +
-                      </button>
-                    </>
-                  ) : (
-                    <button className="btn mint  btn-gradient-blue">
-                      You have reached your mint limit
+                  <>
+                    <button
+                      className="btn btn-round amount  btn-gradient-blue"
+                      onClick={() => decrease()}
+                    >
+                      -
                     </button>
-                  )}
+                    <button
+                      onClick={() => handleMint()}
+                      className="btn mint  btn-gradient-blue"
+                    >
+                      {minting ? "Please Wait" : `Mint ${amount}`}
+                    </button>
+                    <button
+                      className="btn btn-round amount  btn-gradient-blue"
+                      onClick={() => increase()}
+                    >
+                      +
+                    </button>
+                  </>
                 </div>
               </div>
             ) : (
@@ -142,10 +136,8 @@ const Minter = () => {
             <div className="vl"></div>
             {account ? (
               <div className="minter-status-card">
-                <h6>Your Mint</h6>
-                <h2>
-                  {balance}/{limit}
-                </h2>
+                <h6>Per Transaction</h6>
+                <h2>3</h2>
               </div>
             ) : null}
             {/* <div className="vl"></div> */}
